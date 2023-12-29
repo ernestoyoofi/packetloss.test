@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <input type="url" id="socket" placeholder="Socket Server..." value="wss://packetlossws.nepalachi.repl.co/"/>
+    <select id="packetlength">
+      <option value="128">128 bytes</option>
+      <option value="256">256 bytes</option>
+      <option value="512">512 bytes</option>
+      <option value="782">782 bytes</option>
+      <option value="1024">1.024 bytes</option>
+      <option value="1420">1.420 bytes</option>
+      <option value="1920">1.920 bytes</option>
+      <option value="2420">2.420 bytes</option>
+      <option value="2728">2.728 bytes</option>
+    </select>
+    <select id="looprange">
+      <option value="1">1ms</option>
+      <option value="5">5ms</option>
+      <option value="10">10ms</option>
+      <option value="50">50ms</option>
+      <option value="100">100ms</option>
+      <option value="500">500ms</option>
+    </select>
+    <select id="time">
+      <option value="1">1 second</option>
+      <option value="5">5 second</option>
+      <option value="10">10 second</option>
+      <option value="15">15 second</option>
+      <option value="20">20 second</option>
+      <option value="30">30 second</option>
+      <option value="60">60 second</option>
+      <option value="90">90 second</option>
+      <option value="120">120 second</option>
+    </select>
+    <button id="submit">Start</button>
+    <pre id="message" style="overflow-x: hidden; overflow-y: scroll; max-height: 400px;"></pre>
+    <div>
+      <p id="send_packet"></p>
+      <p id="reciver_packet"></p>
+      <p id="time_packet"></p>
+    </div>
+    <div style="max-width: 900px; max-height: 900px;">
+      <canvas id="canvas-chart" height="300"></canvas>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
